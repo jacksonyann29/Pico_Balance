@@ -1450,6 +1450,144 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SM6T27A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SM6T27A"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMB"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm6t.pdf"
+				(at -1.27 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 27Vrwm, DO-214AA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode TVS voltage suppressor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SMB*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SM6T27A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SM6T27A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Jumper:SolderJumper_3_Bridged12"
 			(pin_names
 				(offset 0)
@@ -4095,6 +4233,12 @@
 		(uuid "450d5b84-4a36-408b-94f8-4502c231c38c")
 	)
 	(junction
+		(at 29.21 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ebfd8c1-59fc-4744-81ef-efd32ab4bb31")
+	)
+	(junction
 		(at 201.93 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4800,6 +4944,16 @@
 	)
 	(wire
 		(pts
+			(xy 17.78 34.29) (xy 29.21 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "615692b4-82f4-47bf-a122-60912e426300")
+	)
+	(wire
+		(pts
 			(xy 124.46 29.21) (xy 124.46 34.29)
 		)
 		(stroke
@@ -4907,6 +5061,16 @@
 			(type default)
 		)
 		(uuid "74e10302-4767-4aa2-9136-361b87dc3344")
+	)
+	(wire
+		(pts
+			(xy 17.78 46.99) (xy 17.78 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "751b666a-97cb-4660-9200-fdd6a72ee32c")
 	)
 	(wire
 		(pts
@@ -5287,6 +5451,16 @@
 			(type default)
 		)
 		(uuid "d6cca63f-11e2-401f-a48b-2b65ea47465e")
+	)
+	(wire
+		(pts
+			(xy 17.78 39.37) (xy 17.78 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d95f3d83-73b8-49bd-a612-4ab480ae79d0")
 	)
 	(wire
 		(pts
@@ -5773,6 +5947,72 @@
 				)
 				(justify right)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 17.78 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "010e4222-66fa-4813-8f50-dd5d9cf09523")
+		(property "Reference" "#PWR015"
+			(at 17.78 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 17.78 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 17.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 17.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 17.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "066a887e-9371-498b-af1a-f279068f75f2")
+		)
+		(instances
+			(project ""
+				(path "/07906831-fbcb-4dc7-83a6-3d3bd7082898"
+					(reference "#PWR015")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -7507,8 +7747,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ef89cd2-9f24-4211-8f59-6b99b70f8682")
-		(property "Reference" "D1"
-			(at 208.5975 17.78 0)
+		(property "Reference" "D2"
+			(at 219.71 27.178 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7559,7 +7799,7 @@
 		(instances
 			(project ""
 				(path "/07906831-fbcb-4dc7-83a6-3d3bd7082898"
-					(reference "D1")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -8538,6 +8778,76 @@
 			(project "Pico_Balance"
 				(path "/07906831-fbcb-4dc7-83a6-3d3bd7082898"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SM6T27A")
+		(at 17.78 43.18 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d89118a1-cd7e-4ef4-8177-883d79d58a27")
+		(property "Reference" "D1"
+			(at 20.32 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SM6T27A"
+			(at 20.32 44.4499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED-L1T2_LUMILEDS"
+			(at 12.7 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm6t.pdf"
+			(at 17.78 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 27Vrwm, DO-214AA"
+			(at 17.78 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2519c210-5cc9-48b5-9af0-d31633626c8f")
+		)
+		(pin "2"
+			(uuid "71117b4f-88b9-4ef7-a67f-16dbc0ef5896")
+		)
+		(instances
+			(project ""
+				(path "/07906831-fbcb-4dc7-83a6-3d3bd7082898"
+					(reference "D1")
 					(unit 1)
 				)
 			)
