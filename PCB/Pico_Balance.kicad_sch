@@ -10301,13 +10301,13 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:CSD17577Q3A")
-		(at 68.58 29.21 90)
+		(at 68.58 29.21 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4d400304-0325-470f-b465-e1accd306f3d")
 		(property "Reference" "Q1"
 			(at 68.58 20.32 90)
@@ -10326,7 +10326,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET"
-			(at 70.485 24.13 0)
+			(at 66.675 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10337,7 +10337,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd17577q3a.pdf"
-			(at 72.39 24.13 0)
+			(at 64.77 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
