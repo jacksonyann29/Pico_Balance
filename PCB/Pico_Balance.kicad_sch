@@ -9583,7 +9583,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
+		(property "Value" "PMODE"
 			(at 39.37 83.8201 90)
 			(effects
 				(font
@@ -9722,7 +9722,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
+		(property "Value" "PMODE"
 			(at 39.37 147.3201 90)
 			(effects
 				(font
@@ -14199,7 +14199,7 @@
 				)
 			)
 		)
-		(property "Value" "USB_C_Receptacle_PowerOnly_6P"
+		(property "Value" "5V3A OUT"
 			(at 189.23 120.65 0)
 			(effects
 				(font
