@@ -9,16 +9,17 @@
 uint PWM_init();
 
 /* Define PWM Pins, GPIO12: IN1, GPIO13: IN2 */
-#define IN1 12
-#define IN2 13
+#define IN1 8
+#define IN2 9
 
+/*
 int main() {
-    int new_value, delta, old_value = 0;
+    int new_value, delta, old_value = 0; 
     int last_value = -1, last_delta = -1;
 
     // Base pin to connect the A phase of the encoder.
     // The B phase must be connected to the next pin
-    const uint PIN_AB = 10;
+    const uint PIN_AB = 12;
 
     stdio_init_all();
     printf("Hello from quadrature encoder\n");
@@ -51,30 +52,37 @@ int main() {
         }
         sleep_ms(100);
     }
-}
+}*/
 
-// int main()
-// {
-//     stdio_init_all();
-//     uint slice_num = PWM_init();
+int main()
+{
+    stdio_init_all();
+    uint slice_num = PWM_init();
+
+    // Initialize GPIO6 as output
+    gpio_init(6);
+    gpio_set_dir(6, GPIO_OUT);
     
+    // Enable the motor driver (set sleep pin HIGH)
+    gpio_put(6, 1);
 
-//     while (true) {
-//         /* Cycle through full PWM range */
-//         for(int dc = 0; dc <= 255; dc++) 
-//         {
-//             pwm_set_chan_level(slice_num, PWM_CHAN_A, dc);
-//             pwm_set_chan_level(slice_num, PWM_CHAN_B, 255 - dc);
-//             sleep_ms(1);
-//         }
-//         for(int dc = 255; dc >= 0; dc--) 
-//         {
-//             pwm_set_chan_level(slice_num, PWM_CHAN_A, dc);
-//             pwm_set_chan_level(slice_num, PWM_CHAN_B, 255 - dc);
-//             sleep_ms(1);
-//         }
-//     }
-// }
+
+    while (true) {
+        /* Cycle through full PWM range */
+        for(int dc = 0; dc <= 255; dc++) 
+        {
+            pwm_set_chan_level(slice_num, PWM_CHAN_A, dc);
+            pwm_set_chan_level(slice_num, PWM_CHAN_B, 255 - dc);
+            sleep_ms(1);
+        }
+        for(int dc = 255; dc >= 0; dc--) 
+        {
+            pwm_set_chan_level(slice_num, PWM_CHAN_A, dc);
+            pwm_set_chan_level(slice_num, PWM_CHAN_B, 255 - dc);
+            sleep_ms(1);
+        }
+    }
+}
 
 
 uint PWM_init()
